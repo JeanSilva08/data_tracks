@@ -2,7 +2,7 @@ from googleapiclient.discovery import build
 from time import sleep
 
 # Replace 'YOUR_API_KEY' with your actual API key
-API_KEY = 'AIzaSyD74qS0b9EHk5P-wWMOXXqWk4HTe7Fas04'
+API_KEY = ''
 
 # Number of videos to request in each batch
 BATCH_SIZE = 50
