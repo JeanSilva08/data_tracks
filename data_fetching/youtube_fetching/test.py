@@ -1,108 +1,106 @@
 from googleapiclient.discovery import build
-from time import sleep
+from googleapiclient.errors import HttpError
 
-# Replace 'YOUR_API_KEY' with your actual API key
-API_KEY = ''
-
-# Number of videos to request in each batch
-BATCH_SIZE = 50
-
-# Delay between API requests (in seconds)
-REQUEST_DELAY = 1
-
-
-class VideoManager:
-    def __init__(self, api_key):
-        self.youtube = build('youtube', 'v3', developerKey=api_key)
-
-    def get_video_views(self, video_ids):
-        video_info = {}
-        batch_count = len(video_ids) // BATCH_SIZE + 1
-
-        for i in range(batch_count):
-            batch_ids = video_ids[i * BATCH_SIZE: (i + 1) * BATCH_SIZE]
-            request = self.youtube.videos().list(
-                part='snippet,statistics',  # Include 'snippet' to fetch video title
-                id=','.join(batch_ids)
-            )
-            response = request.execute()
-
-            for item in response.get('items', []):
-                video_id = item['id']
-                title = item['snippet']['title']
-                view_count = int(item['statistics']['viewCount'])
-                video_info[video_id] = {'title': title, 'views': view_count}
-
-                # Print progress
-                print(f"Fetched views for video '{title}': {view_count}")
-
-            # Throttle requests to avoid rate limit
-            sleep(REQUEST_DELAY)
-
-        return video_info
-
-
-def initialize_artist_videos():
-    return {
-        "Teste": ["EZZkjvaU_IQ"],
-
-        "Borges": ["", ""],
-        "Chefin": ["", ""],
-        "Oruam": ["", ""],
-        "Bielzin": ["", ""],
-        "Dfideliz": ["", ""],
-        "PL Quest": ["", ""],
-        "Raffé": ["", ""],
-        "Azevedo": ["", ""],
-        "Leviano": ["", ""],
-        "Ajaxx": ["", ""],
-        "Kizzy": ["", ""],
-        "jess beats": ["", ""],
-        "RUXN": ["", ""],
-        "MC Cabelinho": ["", ""],
-        "Brutos": ["", ""],
-        "A.R": ["", ""],
-        "Vinicin": ["", ""],
-        "MANO R7": ["", ""],
-        "Amorim": ["", ""],
-        "Buddy": ["", ""],
-        "Mvk": ["", ""],
-        "Pedrin": ["", ""],
-        "Mc Filhão": ["", ""],
-        "Shenlong": ["", ""],
-        "DEGE": ["", ""],
-        "Hashi": ["", ""],
-        "Beny Free": ["", ""],
-        "Feek": ["", ""],
-        "Oliveira": ["", ""],
-        "Pior Versão de Mim": ["", ""],
-        "Oreozin": ["", ""],
-        "Peziinho": ["", ""],
-        "Grone": ["", ""],
-        "Vt no beat": ["", ""]
-    }
+# Replace with your own API key
+API_KEY = 'AIzaSyD74qS0b9EHk5P-wWMOXXqWk4HTe7Fas04'
+# Replace with the channel IDs of the artists
+CHANNEL_IDS = {
+    "Mainstreet": "UCDiQ-LZ8dfc3cmoGBxMDS7Q",
+    "Orochi": "UCQSDP7H4BINtrZ0bJc_FNIA",
+    "Poze": "UCsyd_nnNNDxlOs9TYrDvCoQ",
+    "Bin": "UCP0TWIE6oz5raG3FB8tTDmw",
+    "Borges": "UCBRWI1h-efdTbVZK6RQdGqA",
+    "Chefin": "x",
+    "Oruam": "x",
+    "Bielzin": "x",
+    "Dfideliz": "UC0oTDMKxiVS5Kj3CnYnEISg",
+    "PL Quest": "UC-9-kyTW8ZkZNDHQJ6FgpwQ",
+    "Raffe": "x",
+    "Azevedo": "UC4R8DWoMoI7CAwX8_LjQHig",
+    "Leviano": "UCYfdidRxbB8Qhf0Nx7ioOYw",
+    "Ajaxx": "x",
+    "Kizzy": "x",
+    "jess beat": "UCEgdi0XIXXZ-qJOFPf4JSKw",
+    "RUXN": "UCfM3zsQsOnfWNUppiycmBuw",
+    "MC Cabelinho": "UCjhZqfzCp1aDE0GeugC0GXw",
+    "Brutos": "x",
+    "A.R": "x",
+    "Vinicin": "UCfM3zsQsOnfWNUppiycmBuw",
+    "Mano R7": "UCwllLf7J2DmBmxSe_MCHgYQ",
+    "Amorim": "x",
+    "Budy": "UC9uU78JQnuF0PYvvCe9OCJw",
+    "MVK": "UC-9oGMUxHsIhpTPwOQkdb1w",
+    "Pedrin": "UCkcrPDvxYDAdjksVT1ShAMQ",
+    "Filhão": "x",
+    "Shenlong": "x",
+    "DEGE": "UCUYq4-ru4v9iAs79_0fhLhA",
+    "Hashi": "x",
+    "Benny": "UC682IefNWj1TAg6mcywYUkA",
+    "Feek": "UCm5_57oRHlI2KQHOIMsaxmQ",
+    "Oliveira": "x",
+    "Pior versão de mim": "UCRPmcZiyYKBffAgbE15TCYA",
+    "Oreozin": "UCTbh9go3nR1mQpImzeyThYQ",
+    "Peziinho": "x",
+    "Grone": "UCmTOP3EH8agqTaQgJuCjw3A",
+    "VT no Beat": "UC3sU0AcRwUEnEW277gKRAng"
+}
 
 
-def calculate_total_views(video_manager, artist_videos):
-    total_views = {}
+def get_top_videos(api_key, channel_id, max_results=5):
+    if channel_id == "x":
+        return None
 
-    for artist, video_ids in artist_videos.items():
-        print(f"\nCalculating total views for {artist}:")
-        video_views = video_manager.get_video_views(video_ids)
-        total_views[artist] = sum(video_info['views'] for video_info in video_views.values())
+    try:
+        youtube = build('youtube', 'v3', developerKey=api_key)
 
-    return total_views
+        # Fetch the uploads playlist ID
+        request = youtube.channels().list(
+            part='contentDetails',
+            id=channel_id
+        )
+        response = request.execute()
+
+        if 'items' not in response or not response['items']:
+            print(f"No items found for channel ID: {channel_id}")
+            return []
+
+        uploads_playlist_id = response['items'][0]['contentDetails']['relatedPlaylists']['uploads']
+
+        # Fetch the top videos from the uploads playlist
+        request = youtube.playlistItems().list(
+            part='snippet',
+            playlistId=uploads_playlist_id,
+            maxResults=max_results
+        )
+        response = request.execute()
+
+        videos = []
+        for item in response['items']:
+            video_id = item['snippet']['resourceId']['videoId']
+            title = item['snippet']['title']
+            videos.append({'title': title, 'video_id': video_id})
+
+        return videos
+
+    except HttpError as e:
+        print(f"An HTTP error {e.resp.status} occurred: {e.content}")
+        return []
+    except KeyError as e:
+        print(f"A KeyError occurred: {e}")
+        return []
 
 
-if __name__ == "__main__":
-    artist_videos = initialize_artist_videos()
+if __name__ == '__main__':
+    results = {}
+    for artist, channel_id in CHANNEL_IDS.items():
+        print(f"Fetching top videos for {artist} (Channel ID: {channel_id})")
+        top_videos = get_top_videos(API_KEY, channel_id)
+        results[artist] = top_videos
+        if top_videos is not None:
+            for idx, video in enumerate(top_videos, start=1):
+                print(f"{idx}. {video['title']} (https://www.youtube.com/watch?v={video['video_id']})")
+        else:
+            print(f"No videos found for {artist}.")
+        print("\n")
 
-    video_manager = VideoManager(API_KEY)
-    total_views = calculate_total_views(video_manager, artist_videos)
-
-    if total_views:
-        print("\nTotal views for each artist:")
-        for artist, views in total_views.items():
-            print(f"{artist}: {views}")
-    else:
-        print("No videos found.")
+    print("Results:", results)

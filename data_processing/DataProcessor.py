@@ -119,7 +119,7 @@ class DataProcessor:
             header = next(reader)
             rows = list(reader)
 
-        seguidores_index = 25
+        seguidores_index = 22
 
         for i, row in enumerate(rows[3:]):
             artist_name = f"Artist{i + 1}"
@@ -145,7 +145,7 @@ class DataProcessor:
             header = next(reader)
             rows = list(reader)
 
-        youtube_views_index = 18
+        youtube_views_index = 15
 
         for row in rows[3:]:
             artist_name = row[0]
@@ -171,7 +171,7 @@ class DataProcessor:
             header = next(reader)
             rows = list(reader)
 
-        youtube_views_index = 20
+        youtube_views_index = 17
 
         for row in rows[3:]:
             artist_name = row[0]
@@ -197,7 +197,7 @@ class DataProcessor:
             header = next(reader)
             rows = list(reader)
 
-        youtube_views_index = 19
+        youtube_views_index = 16
 
         for row in rows[3:]:
             artist_name = row[0]

@@ -50,8 +50,6 @@ class Main:
             print("Data exported to 'yt_total_views.csv'")
         else:
             print("No videos found.")
-        total_tracks = TotalTracks(artist_urls, '', '')
-        total_tracks.export_to_csv('data/total_tracks.csv')
 
         youtube_feat_fetcher = YoutubeFeatFetcher(API_KEY)
 
@@ -69,8 +67,8 @@ class Main:
         else:
             print("No videos found.")
 
-        popularity_followers = PopularityFollowers(client_id='',
-                                                   client_secret='')
+        popularity_followers = PopularityFollowers(client_id='fb5f08a6437c4e1dbcd18dc98475216b',
+                                                   client_secret='6e9993758a7e4a08919de25cfa34bfc9')
         artist_followers = {}
         for artist_name in artist_names:
             _, followers = popularity_followers.get_followers(artist_name)
@@ -80,7 +78,6 @@ class Main:
 
         DataProcessor.update_total_followers_sptfy()
         DataProcessor.update_monthly_listeners()
-        DataProcessor.update_total_tracks()
         DataProcessor.update_instagram_followers()
         DataProcessor.update_sptfy_playcount()
         DataProcessor.update_youtube_views()

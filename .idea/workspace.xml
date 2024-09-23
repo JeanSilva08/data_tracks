@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e1445408-dd4c-4028-9cac-e017a6bacd01" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/data-fetch-418617-0859e9e0218e.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/playcount_charts.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/track_playcounts.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/track_playcounts_charts.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/DuplicatedUrl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/ListFIlter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/RankMonthlyListeners.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/RankPlaycount.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/SongFInder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/TestTrackTotal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/TotalStreamsSptfyFeats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/TotalTracks1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/constants.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/monthly_listeners.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/test3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/test4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/test5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/test6.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/testsorting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_fetching/youtube_fetching/test2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/track-data.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/track_data.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Midia Kit Artistas_teste.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/Midia Kit Artistas_teste.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/insta_followers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/insta_followers.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/monthly_listeners.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/monthly_listeners.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/playcount.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/playcount.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/total_followers_sptfy.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/total_followers_sptfy.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/total_tracks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/total_tracks.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/yt_total_views.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/yt_total_views.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ytfeat_total_views.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/ytfeat_total_views.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ytmsc_total_views.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/ytmsc_total_views.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_fetching/instagram_fetching/InstaFallowersFetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_fetching/instagram_fetching/InstaFallowersFetcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_fetching/instagram_fetching/insta_followers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_fetching/instagram_fetching/insta_followers.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_fetching/spotify_fetching/MonthlyListeners.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/MonthlyListeners.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_fetching/spotify_fetching/PlaylistsSptfy.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/PlaylistsSptfy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_fetching/spotify_fetching/TotalStreamsSptfy.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/TotalStreamsSptfy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_fetching/spotify_fetching/playlist_tracks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/playlist_tracks.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_fetching/spotify_fetching/test2.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_fetching/spotify_fetching/test2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_fetching/youtube_fetching/YoutubeFeatFetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_fetching/youtube_fetching/YoutubeFeatFetcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_fetching/youtube_fetching/YoutubeFetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_fetching/youtube_fetching/YoutubeFetcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_fetching/youtube_fetching/YoutubeMscFetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_fetching/youtube_fetching/YoutubeMscFetcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_fetching/youtube_fetching/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_fetching/youtube_fetching/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_processing/DataProcessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_processing/DataProcessor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sheets_automation/UpdateSheets.py" beforeDir="false" afterPath="$PROJECT_DIR$/sheets_automation/UpdateSheets.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="onto" value="4327bfe441229205e97d50480b18882b93febee3" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Main.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2gCHAwjRHOVkTPd09vtAHqNWv3J" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.DuplicatedUrl.executor&quot;: &quot;Run&quot;,
+    &quot;Python.InstaFallowersFetcher.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ListFIlter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MonthlyListeners.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PlaylistsSptfy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RankMonthlyListeners.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RankPlaycount.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SongFInder.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TestTrackTotal.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TotalStreamsSptfy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TotalTracks1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.constants.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rank_playcount.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test5.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testsorting.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mrsepiol/Dev/track_data&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/data_fetching/spotify_fetching" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-884f5ed5d46b-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.22855.92" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e1445408-dd4c-4028-9cac-e017a6bacd01" name="Changes" comment="" />
+      <created>1715194502963</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715194502963</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/data_fetching/spotify_fetching/constants.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -10,13 +10,13 @@ class UpdateSheets:
         scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 
         creds = ServiceAccountCredentials.from_json_keyfile_name(
-            '', scope)
+            'data-fetch-418617-0859e9e0218e.json', scope)
 
         try:
 
             client = gspread.authorize(creds)
 
-            spreadsheet_title = ''
+            spreadsheet_title = 'teste'
 
             spreadsheet = client.open(spreadsheet_title)
 

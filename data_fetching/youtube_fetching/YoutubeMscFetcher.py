@@ -2,7 +2,7 @@ from googleapiclient.discovery import build
 from time import sleep
 import csv
 
-API_KEY = ''
+API_KEY = 'AIzaSyD74qS0b9EHk5P-wWMOXXqWk4HTe7Fas04'
 
 BATCH_SIZE = 50
 

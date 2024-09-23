@@ -5,9 +5,9 @@ import csv
 def fetch_instagram_followers(artist_usernames):
     loader = instaloader.Instaloader()
 
-    loader.load_session_from_file('')
+    loader.load_session_from_file('avlis_seraos')
     if not loader.context.is_logged_in:
-        loader.context.login('', '')
+        loader.context.login('avlis_seraos', 'swordfish08')
 
     data = []
 
@@ -33,7 +33,7 @@ artist_usernames = [
     'souobin',
     'borges.clout',
     'chefinoficial',
-    'oruam__',
+    'oruam',
     'bielzin',
     'dfideliz',
     'plquest_',
@@ -43,7 +43,7 @@ artist_usernames = [
     'ajaxxprod',
     'kaiquekizzy',
     'jessbeats',
-    'beatsbyruxn',
+    'beatdoruxn',
     'mccabelinho',
     'brutosb13',
     'a.rb13',
